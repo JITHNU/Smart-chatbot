@@ -115,8 +115,11 @@ if st.sidebar.button("Fetch Wiki Info"):
 
 # Chat history display
 st.subheader("💬 Chat History")
-for sender, message in st.session_state['history']:
-    st.markdown(f"**{sender}:** {message}")
+if 'history' in st.session_state and st.session_state['history']:
+    for sender, message in st.session_state['history']:
+        st.markdown(f"**{sender}:** {message}")
+else:
+    st.info("No messages yet. Start the conversation below!")
 
 
 if st.button("🧹 Clear Chat"):
