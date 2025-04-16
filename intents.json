@@ -1,0 +1,30 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey", "good morning", "good evening"],
+      "responses": ["Hello!", "Hi there!", "Hey!"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "take care"],
+      "responses": ["Goodbye!", "See you soon!", "Take care!"]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["what's the weather", "is it sunny today?", "how's the weather"],
+      "responses": ["Today is sunny!", "Looks like rain.", "It's a bit cloudy today."]
+    },
+    {
+      "tag": "general_knowledge",
+      "patterns": [
+        "What is the capital of France?",
+        "Who is the president of the USA?",
+        "Where is the Eiffel Tower?",
+        "Tell me about Python",
+        "What is machine learning?"
+      ],
+      "responses": ["Let me look that up for you."]
+    }
+  ]
+}
