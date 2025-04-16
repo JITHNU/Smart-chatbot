@@ -43,6 +43,9 @@ if not context:
 
 logo = Image.open("logo.png")  
 st.image(logo, width=100)
+#col1, col2, col3 = st.columns([1, 2, 1])
+
+
 
 def update_knowledge_base_from_wikipedia(query, filename="knowledge_base.txt"):
     try:
@@ -117,23 +120,24 @@ if st.sidebar.button("Fetch Wiki Info"):
     else:
         st.sidebar.warning("Please enter a topic!")
 
-# Chat history display
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = []
+
 st.subheader("💬 Chat History")
-if 'history' in st.session_state and st.session_state['history']:
-    for sender, message in st.session_state['history']:
+if st.session_state.chat_history:
+    for sender, message in st.session_state.chat_history:
         st.markdown(f"**{sender}:** {message}")
 else:
     st.info("No messages yet. Start the conversation below!")
 
 
 if st.button("🧹 Clear Chat"):
-    st.session_state['history'] = []
+    st.session_state.chat_history = []
     st.rerun()
 
-st.title("💬 Smart Chatbot with Knowledge Base 🤖")
+st.title("💬KnowledgeBased Smart Chatbot🤖")
 
-if "chat_history" not in st.session_state:
-    st.session_state.chat_history = []
+
 
 user_input = st.chat_input("Ask me anything!")
 if user_input:
@@ -147,3 +151,4 @@ for sender, msg in st.session_state.chat_history:
         st.markdown(msg)
         if sender == "bot" and voice_enabled:
             speak(msg)
+
