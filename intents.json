@@ -6,6 +6,11 @@
       "responses": ["Hello!", "Hi there!", "Hey!"]
     },
     {
+      "tag": "name",
+      "patterns": ["What's your name?", "Who are you?", "Your name?", "Tell me your name"],
+      "responses": ["My name is JithBot 🤖, your intelligent chatbot assistant!"]
+    },
+    {
       "tag": "goodbye",
       "patterns": ["bye", "goodbye", "see you", "take care"],
       "responses": ["Goodbye!", "See you soon!", "Take care!"]
