@@ -20,7 +20,7 @@ Welcome to **JithBot**, a smart, multilingual chatbot built using machine learni
 
 ## 🚀 Demo
 
-👉 [Live Demo on Streamlit]([https://your-streamlit-app-link-here](https://huggingface.co/spaces/Jithnuka/Smart-chatbot))
+👉 https://huggingface.co/spaces/Jithnuka/Smart-chatbot
 
 ## 🧠 Tech Stack
 
@@ -44,5 +44,6 @@ requirements.txt (list all dependencies)
 
 
 📦 intelligent-chatbot/ ├── app.py # Streamlit app ├── intents.json # Intent data ├── knowledge_base.txt # Knowledge base file ├── label_encoder.pkl # Label encoder ├── mini_model.pkl # Trained ML model ├── logo.png # App logo └── requirements.txt # Python dependencies
-Developed by Jithnuka
+
+Developed by Jithnuka ❤️
 Department of Statistics & Computer Science, University of Kelaniya
