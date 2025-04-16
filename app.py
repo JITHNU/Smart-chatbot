@@ -1,4 +1,6 @@
 import streamlit as st
+st.set_page_config(page_title="JithBot", page_icon="🤖", layout="wide")
+
 import json
 import random
 import pickle
@@ -37,6 +39,9 @@ with open("knowledge_base.txt", "r", encoding="utf-8") as f:
 
 if not context:
     context = "Paris is the capital of France."
+
+logo = Image.open("logo.png")  
+st.image(logo, width=100)
 
 def update_knowledge_base_from_wikipedia(query, filename="knowledge_base.txt"):
     try:
@@ -97,8 +102,6 @@ def speak(text):
     fp = BytesIO()
     tts.write_to_fp(fp)
     st.audio(fp.getvalue(), format='audio/mp3')
-
-st.set_page_config(page_title="Smart Chatbot", layout="wide")
 
 #Sidebar
 st.sidebar.title("🔧 Controls")
