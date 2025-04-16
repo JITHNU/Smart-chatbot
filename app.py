@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import random
 import pickle
-import pyttsx3
+#import pyttsx3
 import wikipedia
 import torch
 import os
