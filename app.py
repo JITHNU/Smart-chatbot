@@ -10,6 +10,7 @@ import torch
 import os
 from gtts import gTTS
 from io import BytesIO
+from PIL import Image
 from sentence_transformers import SentenceTransformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
